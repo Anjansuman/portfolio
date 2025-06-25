@@ -1,5 +1,6 @@
 import { Roboto } from "next/font/google";
 import { GoogleMeet } from "./SVGs/GoogleMeet";
+import { HireMe } from "./SVGs/HireMe";
 
 const roboto = Roboto({
     subsets: ["latin"]
@@ -23,17 +24,27 @@ export const Name = ({ ref, className }: TechProps) => {
                 Full-stack WEB-2/WEB-3 developer
             </div>
         </div>
-        <div className={`text-end ${roboto.className} `}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, nam. Vitae distinctio saepe, vel fugiat, consequatur error quidem omnis ea optio ad harum reiciendis cum culpa, cupiditate iure placeat officiis assumenda incidunt? Numquam recusandae accusamus corporis natus eos reiciendis obcaecati expedita ratione, architecto, fugit sunt, voluptatibus nisi iste eaque dolorem.
+        <div className={`text-justify text-sm ${roboto.className} `}>
+            A full-stack developer with a keen focus on pioneering the next generation of the web: Web3. Specializing in scalable, high-performance applications, leveraging a modern tech stack — including TypeScript, Next.js, Tailwind CSS, Node.js, and Solidity — to architect robust solutions across frontend, backend, and blockchain layers. With a strong emphasis on clean architecture, seamless user experiences, and secure smart-contract integration, delivering reliable, end-to-end systems from concept through deployment.
         </div>
-        <a
-            className="flex items-center justify-end gap-x-2 py-2 px-3 transition-colors duration-200 ease-in-out cursor-pointer rounded-xl hover:bg-[#3d3932] "
-            href={""}    
-        >
-            <GoogleMeet />
-            <div className={`text-xl `}>
-                Book a meet
-            </div>
-        </a>
+        <div className="flex justify-end items-center gap-x-3 ">
+            <a
+                className="flex items-center justify-end gap-x-2 py-2 px-3 transition-colors duration-200 ease-in-out cursor-pointer rounded-xl hover:bg-[#3d3932] "
+                href={""}
+            >
+                <GoogleMeet />
+                <div className={`text-xl `}>
+                    Book a meet
+                </div>
+            </a>
+            {/* <a
+                className="flex items-center justify-end gap-x-2 py-2 px-3 transition-colors duration-200 ease-in-out cursor-pointer rounded-xl hover:bg-[#3d3932] "
+            >
+                <HireMe />
+                <div className="text-xl">
+                    Hire me
+                </div>
+            </a> */}
+        </div>
     </div>
 }

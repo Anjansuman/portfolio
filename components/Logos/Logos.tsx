@@ -1,3 +1,4 @@
+import { Figma } from "../SVGs/Figma";
 import { Ganache } from "../SVGs/Ganache";
 import { Hardhat } from "../SVGs/Hardhat";
 import { Tailwind } from "../SVGs/Tailwind";
@@ -17,7 +18,7 @@ export const Logos = [
     { name: "c", url: "https://img.icons8.com/?size=100&id=mfkStOwP4EC0&format=png&color=000000" },
     { name: "solidity", url: "https://img.icons8.com/?size=100&id=at2DODSyQznb&format=png&color=000000" },
     { name: "rust", url: "https://img.icons8.com/?size=100&id=haeAxVQEIg0F&format=png&color=000000" },
-    { name: "figma", url: "https://img.icons8.com/?size=100&id=snB4bDeuO6gJ&format=png&color=000000" },
+    { name: "figma", url: <Figma /> },
     { name: "nodeJS", url: "https://img.icons8.com/?size=100&id=54087&format=png&color=000000" },
     { name: "expressJS", url: "https://img.icons8.com/?size=100&id=SDVmtZ6VBGXt&format=png&color=000000" },
     { name: "reactJS", url: "https://img.icons8.com/?size=100&id=NfbyHexzVEDk&format=png&color=000000" },

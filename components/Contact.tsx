@@ -65,7 +65,7 @@ export const Contact = ({ ref, className }: ContactProps) => {
             </a>
             <a
                 target="_blank"
-                href="https://github.com/Anjansuman"
+                href="https://drive.google.com/file/d/1tiMKLVbUUM6WfgVFRVZuQ5YMeupmLu_r/view?usp=drivesdk"
                 className="cursor-pointer"
                 onMouseEnter={(e) => handleMouseEnter(e, "resume")}
                 onMouseMove={(e) => setPosition({ x: e.clientX, y: e.clientY })}

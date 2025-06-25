@@ -16,14 +16,6 @@ export const ExperienceDetails: ExperienceDetails[] = [
         duration: "May, 2025 - June, 2025",
         role: "Full-stack developer",
         web: "",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim totam sunt dolorem, neque quasi magnam, dolore culpa voluptatem modi itaque aliquam esse, sapiente facilis deserunt tempora aperiam accusantium consequatur perspiciatis doloremque corporis? Deserunt labore ad hic a exercitationem reiciendis perspiciatis?"
-    },
-    {
-        company: "Wallpaper heaven",
-        Logo: "",
-        duration: "13th May, 2025 - 7th July, 2025",
-        role: "Full-stack developer",
-        web: "",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim totam sunt dolorem, neque quasi magnam, dolore culpa voluptatem modi itaque aliquam esse, sapiente facilis deserunt tempora aperiam accusantium consequatur perspiciatis doloremque corporis? Deserunt labore ad hic a exercitationem reiciendis perspiciatis?"
+        description: "Designed, developed, and deployed the official website for Wallpaper Heaven, a premium interior design studio specializing in curated wall aesthetics. Built a responsive frontend using Next.js and Tailwind CSS, and developed a custom admin panel for managing offers and product collections. Integrated dynamic content features with TypeScript and Prisma ORM. The application was deployed on AWS EC2 with a focus on performance, SEO optimization, and smooth user experience across devices."
     }
 ];

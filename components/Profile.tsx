@@ -16,6 +16,6 @@ export const Profile = ({ ref, className }: ProfileProps) => {
         className={`w-full h-full relative col-span-3 row-span-5 bg-[#565449] rounded-xl overflow-hidden ${className}`}
         ref={ref}
     >
-        <Image src={profile} alt={"Anjan Suman"} />
+        <Image src={profile} alt={"Anjan Suman"} unoptimized />
     </div>
 }

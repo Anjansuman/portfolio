@@ -46,7 +46,9 @@ export default function Home() {
         opacity: 1,
       });
 
-      tl.to({}, { duration: 0.5 });
+      tl.to({}, {
+        duration: 0.7
+      });
 
       tl.to(profile, {
         scale: 1,

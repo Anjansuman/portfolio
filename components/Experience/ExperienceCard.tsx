@@ -40,17 +40,14 @@ export const ExperienceCard = ({ company }: ExperienceCardProps) => {
                 href={experience?.web}
                 className="w-44 h-30 relative flex justify-center items-center rounded-lg overflow-hidden bg-[#50130E] "
             >
-                <Image src={wallpaper_heaven} alt={"Wallpaper-Heaven"} width={100} className="object-cover " />
+                <Image src={wallpaper_heaven} alt={"Wallpaper-Heaven"} width={100} className="object-cover " unoptimized />
                 <div className="absolute right-0 top-0 p-1 bg-[#0f0f0f] rounded-bl-lg rounded-tr-lg ">
                     <IconExternalLink className="text-[#D8CFBC] size-5 " />
                 </div>
             </a>
         </div>
-        <div className={`text-sm ${roboto.className} `}>
+        <div className={`text-sm text-justify ${roboto.className} `}>
             {experience?.description}
-        </div>
-        <div>
-
         </div>
     </div>
 }
