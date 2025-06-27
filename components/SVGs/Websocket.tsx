@@ -1,8 +1,8 @@
 
 
-export const Websocket = () => {
+export const Websocket = ({ className }: { className?: string }) => {
     return <div>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 96 96" id="Websocket--Streamline-Svg-Logos" width={60} >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 96 96" id="Websocket--Streamline-Svg-Logos" className={`${className}`} >
             <desc>
                 Websocket Streamline Icon: https://streamlinehq.com
             </desc>

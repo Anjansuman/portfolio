@@ -9,10 +9,11 @@ const roboto = Roboto({
 });
 
 interface ExperienceCardProps {
-    company: string
+    company: string,
+    className?: string
 }
 
-export const ExperienceCard = ({ company }: ExperienceCardProps) => {
+export const ExperienceCard = ({ company, className }: ExperienceCardProps) => {
 
     const experience = ExperienceDetails.find((c) => {
         if (c.company === company) {
@@ -20,7 +21,7 @@ export const ExperienceCard = ({ company }: ExperienceCardProps) => {
         }
     })
 
-    return <div className="w-full h-full flex flex-col justify-between items-end text-end ">
+    return <div className={`w-full h-full flex flex-col justify-around items-end text-end ${className} `}>
         <div className="w-full flex justify-end gap-x-6 ">
             <div className="flex flex-col justify-around items-end text-end ">
                 <div className="flex flex-col">

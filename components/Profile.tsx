@@ -13,9 +13,14 @@ interface ProfileProps {
 export const Profile = ({ ref, className }: ProfileProps) => {
 
     return <div
-        className={`w-full h-full relative col-span-3 row-span-5 bg-[#565449] rounded-xl overflow-hidden ${className}`}
+        className={`w-full h-full relative bg-[#565449] rounded-xl overflow-hidden ${className}`}
         ref={ref}
     >
-        <Image src={profile} alt={"Anjan Suman"} unoptimized />
+        <Image
+            src={profile}
+            alt={"Anjan Suman"}
+            unoptimized
+            className="w-auto h-auto object-contain "
+        />
     </div>
 }

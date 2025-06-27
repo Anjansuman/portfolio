@@ -2,12 +2,12 @@ import { Logos } from "../Logos/Logos";
 import { Logo } from "./Logo";
 import gsap from "gsap";
 
-interface NameProps {
+interface TechProps {
     ref?: React.Ref<HTMLDivElement>,
     className?: string
 }
 
-export const Tech = ({ ref, className }: NameProps) => {
+export const Tech = ({ ref, className }: TechProps) => {
 
     const LogoNames = Logos.map((l) => (l.name));
 
@@ -41,10 +41,10 @@ export const Tech = ({ ref, className }: NameProps) => {
     }
 
     return <div
-        className={`p-5 col-span-5 row-span-5 bg-[#D8CFBC] rounded-xl flex flex-col gap-y-3 overflow-hidden ${className}`}
+        className={`p-5 bg-[#D8CFBC] rounded-xl flex flex-col gap-y-3 overflow-hidden ${className}`}
         ref={ref}
     >
-        <div className="text-2xl w-full border-b-2 border-[#0f0f0f] ">
+        <div className="text-2xl w-full border-b-2 border-[#0f0f0f] pb-1 ">
             Tech-stack
         </div>
         {/* tech stack */}

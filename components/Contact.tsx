@@ -30,7 +30,7 @@ export const Contact = ({ ref, className }: ContactProps) => {
 
     return (
         <div
-            className={`h-full w-full p-5 flex justify-center items-center gap-x-12 text-lg relative col-span-4 row-span-2 bg-[#D8CFBC] rounded-xl overflow-hidden opacity-0 ${className} ${roboto.className}`}
+            className={`h-full w-full p-5 flex justify-center items-center gap-x-12 text-lg relative bg-[#D8CFBC] rounded-xl overflow-hidden opacity-0 ${className} ${roboto.className}`}
             ref={ref}
         >
             <a

@@ -19,7 +19,7 @@ export const NavBar = ({ ref, className }: NavBarProps) => {
     const [walletPanel, setWalletPanel] = useState<boolean>(false);
 
     return <div
-        className={`bg-[#D8CFBC] px-6 py-3 rounded-2xl flex justify-between items-center row-span-1 col-span-12 ${className} `}
+        className={`bg-[#D8CFBC] px-6 py-3 rounded-2xl flex justify-between items-center ${className} `}
         ref={ref}
     >
         <div className={`text-2xl `}>

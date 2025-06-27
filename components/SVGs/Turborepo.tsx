@@ -1,8 +1,8 @@
 
 
-export const Turborepo = () => {
+export const Turborepo = ({ className }: { className?: string }) => {
     return <div>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 96 96" id="Turborepo-Icon--Streamline-Svg-Logos" width={60} >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 96 96" id="Turborepo-Icon--Streamline-Svg-Logos" className={className} >
             <desc>
                 Turborepo Icon Streamline Icon: https://streamlinehq.com
             </desc>

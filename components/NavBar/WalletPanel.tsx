@@ -34,17 +34,33 @@ export const WalletPanel = ({ close }: WalletPanelProps) => {
   }, []);
 
   useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (
+        walletPanelRef.current &&
+        !walletPanelRef.current.contains(event.target as Node)
+      ) {
+        close(); // Call the close function when clicked outside
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [close]);
+
+  useEffect(() => {
     if (!mounted || !walletPanelRef.current) return;
 
     const el = walletPanelRef.current;
 
-    // Immediately hide the element before DOM paints
+    // Initial animation setup
     gsap.set(el, {
       y: 50,
       opacity: 0,
     });
 
-    // Run animation after one frame to avoid jump
+    // Trigger entrance animation after next frame
     requestAnimationFrame(() => {
       gsap.to(el, {
         y: 0,
@@ -53,7 +69,30 @@ export const WalletPanel = ({ close }: WalletPanelProps) => {
         ease: "power2.out",
       });
     });
-  }, [mounted]);
+
+    // Close on outside click
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (el && !el.contains(event.target as Node)) {
+        close();
+      }
+    };
+
+    // Close on Esc key press
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        close();
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    document.addEventListener("keydown", handleEsc);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("keydown", handleEsc);
+    };
+  }, [mounted, close]);
+
 
   if (!mounted) return null;
 

@@ -1,8 +1,8 @@
 
 
-export const Ganache = () => {
+export const Ganache = ({ className }: { className?: string }) => {
     return <div>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 96 96" id="Ganache-Icon--Streamline-Svg-Logos" width={60} >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 96 96" id="Ganache-Icon--Streamline-Svg-Logos" className={`${className}`} >
             <desc>
                 Ganache Icon Streamline Icon: https://streamlinehq.com
             </desc>

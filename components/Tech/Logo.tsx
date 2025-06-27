@@ -11,7 +11,7 @@ export const Logo = ({ name }: LogoProps) => {
 
   return (
     <div
-      className="logo px-2 py-2 rounded-md hover:bg-[#5654496a] transition-colors duration-200 ease-in-out cursor-pointer flex justify-center items-center"
+      className="logo size:16 2xl:size-18 rounded-md hover:bg-[#5654496a] transition-colors duration-200 ease-in-out cursor-pointer flex justify-center items-center flex-shrink-0 "
       title={name}
     >
       {typeof found.url === "string" ? (

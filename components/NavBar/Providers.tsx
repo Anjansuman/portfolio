@@ -3,6 +3,7 @@ import Backpack from "@/public/Backpack.png";
 import { Coinbase } from "../SVGs/Coinbase";
 import { Phantom } from "../SVGs/Phantom";
 import React from "react";
+import { Brave } from "../SVGs/Brave";
 
 interface Providers {
     name: string,
@@ -35,16 +36,23 @@ export const Providers: Providers[] = [
             src={Backpack}
             alt={"Backpack"}
             className="size-6 rounded-sm "
+            unoptimized
         />,
         img2: <Image
             src={Backpack}
             alt={"Backpack"}
             className="size-12 rounded-sm "
+            unoptimized
         />
     },
     {
         name: "Coinbase Wallet",
         img: <Coinbase className="size-6 " />,
         img2: <Coinbase className="size-12 " />
+    },
+    {
+        name: "Brave Wallet",
+        img: <Brave className="size-6" />,
+        img2: <Brave className="size-12 " />
     }
 ];

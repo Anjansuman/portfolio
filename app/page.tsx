@@ -84,28 +84,69 @@ export default function Home() {
     });
   }, []);
 
-  return <div className="w-screen h-screen bg-[#0f0f0f] p-5 text-[#0f0f0f] ">
+  return (
+    <div className="w-screen xl:h-screen bg-[#0f0f0f] p-5 text-[#0f0f0f] overflow-x-hidden overflow-y-auto [::-webkit-scrollbar]:hidden [scrollbar-width:none] scroll-smooth">
+      <div
+        className="h-full grid
+          grid-cols-12
+          grid-rows-19 xl:grid-rows-10
+          gap-x-5 gap-y-5"
+      >
 
-    <div className="h-full grid grid-rows-10 grid-cols-12 gap-x-5 gap-y-5 ">
-      <NavBar ref={NavBarRef} className="opacity-0" />
+        {/* grid-rows-[repeat(19,minmax(0,1fr))] lg:grid-rows-[repeat(10,minmax(0,1fr))] */}
+        <NavBar
+          ref={NavBarRef}
+          className="opacity-0
+          col-span-12
+          row-span-1 "
+        />
+
+        <Tech
+          ref={TechRef}
+          className="opacity-0 h-full flex flex-col
+            col-span-12 sm:col-span-8 md:col-span-8 lg:col-span-5
+            row-span-5 "
+        />
 
 
-      {/* this will be the new tech stack window */}
-      <Tech ref={TechRef} className="opacity-0" />
+        <Profile
+          ref={profileRef}
+          className="opacity-0 h-full flex flex-col
+            col-span-12 sm:col-span-8 md:col-span-4 lg:col-span-3
+            row-span-5 "
+        />
 
 
-      <Profile ref={profileRef} className="opacity-0" />
-      <Projects ref={ProjectsRef} className="opacity-0" />
+        <Projects
+          ref={ProjectsRef}
+          className="opacity-0
+            col-span-12 lg:col-span-4
+            row-span-8 "
+        />
 
-      <Experience ref={ExperienceRef} className="opacity-0" />
+        <Experience
+          ref={ExperienceRef}
+          className="opacity-0
+            col-span-12 md:col-span-6 lg:col-span-4
+            row-span-5 "
+        />
 
-      {/* this will be the new profile info */}
-      <Name ref={NameRef} className="opacity-0" />
+        <Name
+          ref={NameRef}
+          className="opacity-0
+            col-span-12 md:col-span-6 lg:col-span-4
+            row-span-5 "
+        />
 
+        <Contact
+          ref={ContactRef}
+          className="opacity-0
+            col-span-12 lg:col-span-4
+            row-span-2 "
+        />
 
-      <Contact ref={ContactRef} className="opacity-0" />
+      </div>
     </div>
-  </div>
-}
 
-// [name, nav, projects, contact, tech, experience]
+  );
+}
