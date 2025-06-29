@@ -16,7 +16,7 @@ export const Name = ({ ref, className }: NameProps) => {
         className={`bg-[#565449] rounded-xl overflow-hidden p-5 text-[#D8CFBC] flex flex-col items-end justify-between gap-y-2 ${className}`}
         ref={ref}
     >
-        <div className="w-full flex flex-col justify-start items-end gap-y-[0.5px] ">
+        <div className="w-full max-h-[75rem] flex flex-col justify-start items-end gap-y-[0.5px] ">
             <div className="text-4xl 2xl:text-5xl font-medium text-shadow-lg ">
                 Anjan Suman
             </div>
@@ -32,8 +32,8 @@ export const Name = ({ ref, className }: NameProps) => {
                 className="flex items-center justify-end gap-x-2 py-2 px-3 transition-colors duration-200 ease-in-out cursor-pointer rounded-xl hover:bg-[#3d3932] "
                 href={""}
             >
-                <GoogleMeet />
-                <div className={`text-xl `}>
+                <GoogleMeet className="size-8 2xl:size-10" />
+                <div className={`text-lg 2xl:text-xl `}>
                     Book a meet
                 </div>
             </a>

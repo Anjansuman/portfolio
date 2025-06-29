@@ -26,7 +26,7 @@ export const NavBar = ({ ref, className }: NavBarProps) => {
             Developer
         </div>
         <div
-            className={`text-[#D8CFBC] flex items-center justify-center gap-x-2 font-medium py-3 px-4 bg-[#565449] rounded-xl hover:bg-[#3d3932] transition-colors duration-200 ease-in-out cursor-pointer ${roboto.className} `}
+            className={`text-[#D8CFBC] flex items-center justify-center gap-x-2 font-medium py-2 2xl:py-3 px-3 2xl:px-4 bg-[#565449] rounded-xl hover:bg-[#3d3932] transition-colors duration-200 ease-in-out cursor-pointer ${roboto.className} `}
             onClick={() => setWalletPanel(true)}
         >
             {/* add a connect wallet button for paying */}

@@ -20,7 +20,7 @@ export const Profile = ({ ref, className }: ProfileProps) => {
             src={profile}
             alt={"Anjan Suman"}
             unoptimized
-            className="w-auto h-auto object-contain "
+            className="w-fit h-fit object-fill "
         />
     </div>
 }

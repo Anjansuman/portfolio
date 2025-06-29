@@ -1,4 +1,5 @@
 import { Logos } from "../Logos/Logos";
+import ToolTip from "../ToolTip";
 import { Logo } from "./Logo";
 import gsap from "gsap";
 
@@ -49,12 +50,14 @@ export const Tech = ({ ref, className }: TechProps) => {
         </div>
         {/* tech stack */}
         <div
-            className="w-full flex flex-wrap justify-start gap-2"
+            className="w-full flex flex-wrap justify-start gap-2 "
             ref={(el) => handleAnimation(el)}
         >
             {
-                LogoNames.map((name, index) => (
-                    <Logo name={name} key={index} />
+                LogoNames.map((name: string, index: number) => (
+                    <ToolTip text={name} key={index} >
+                        <Logo name={name} />
+                    </ToolTip>
                 ))
             }
         </div>

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Anjan Suman — Full Stack Developer",
     description: "Explore projects, skills, and contact info.",
-    url: "https://your-domain.com",
+    url: "https://anjan-neon.vercel.app",
     siteName: "Anjan Suman Portfolio",
     images: [
       {

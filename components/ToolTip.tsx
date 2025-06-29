@@ -1,26 +1,62 @@
-import Image from "next/image";
-import profile from "@/public/profile.jpg";
+"use client";
+
+import { ReactNode, useState, useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({ subsets: ["latin"] });
 
 interface ToolTipProps {
-    x: number,
-    y: number,
-    alt: string,
+    text: string;
+    children: ReactNode;
+    offsetX?: number;
+    offsetY?: number;
+    className?: string;
 }
 
-export const ToolTip = ({ x, y, alt}: ToolTipProps) => {
+export default function ToolTip({
+    text,
+    children,
+    offsetX = 17,
+    offsetY = 30,
+    className = "",
+}: ToolTipProps) {
+    const [visible, setVisible] = useState(false);
+    const [coords, setCoords] = useState({ x: 0, y: 0 });
+    const tooltipRef = useRef<HTMLDivElement>(null);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true); // Ensures portal only renders on client
+    }, []);
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        setCoords({
+            x: e.clientX + offsetX,
+            y: e.clientY + offsetY,
+        });
+    };
+
     return (
         <div
-            className="absolute z-20 w-36 h-36 overflow-hidden rounded-lg border border-[#0f0f0f] shadow-xl pointer-events-none"
-            style={{
-                left: `${x}px`,
-                top: `${y}px`,
-            }}
+            className="relative inline-block"
+            onMouseEnter={() => setVisible(true)}
+            onMouseLeave={() => setVisible(false)}
+            onMouseMove={handleMouseMove}
         >
-            <Image
-                src={profile}
-                alt={alt}
-                className="w-full h-full object-cover"
-            />
+            {children}
+            {mounted && visible &&
+                createPortal(
+                    <div
+                        ref={tooltipRef}
+                        className={`fixed z-[9999] pointer-events-none whitespace-nowrap bg-neutral-200 text-black text-sm px-2 py-1 rounded shadow-md transition-opacity duration-200 ${roboto.className} ${className}`}
+                        style={{ left: coords.x, top: coords.y }}
+                    >
+                        {text}
+                    </div>,
+                    document.body
+                )
+            }
         </div>
     );
-};
+}

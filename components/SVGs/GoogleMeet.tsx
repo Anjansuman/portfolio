@@ -1,8 +1,8 @@
 
 
-export const GoogleMeet = () => {
+export const GoogleMeet = ({ className }: { className?: string }) => {
     return <div>
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" className="size-10" viewBox="0 0 100 100">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" className={className} viewBox="0 0 100 100">
             <path fill="#8cc78c" d="M91,23.67v52.66c0,1.44-1.69,2.21-2.78,1.28L74,65.36V34.64l14.22-12.25	C89.31,21.46,91,22.23,91,23.67z"></path>
             <polygon fill="#70b570" points="74,65.36 56.67,50.38 56.23,50 56.67,49.62 74,34.64"></polygon>
             <path fill="#ead032" d="M56,50V35H26l-0.5-0.45V17.5l-0.25-0.25L25.5,17H69c2.76,0,5,2.24,5,5v12.64L56.67,49.62L56.23,50H56	z"></path>

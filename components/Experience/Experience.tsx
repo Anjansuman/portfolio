@@ -88,7 +88,7 @@ export const Experience = ({ ref, className }: ExperienceProps) => {
     }
 
     return <div
-        className={`relative bg-[#D8CFBC] rounded-xl overflow-hidden p-5 flex flex-col gap-y-3 ${className} `}
+        className={`relative bg-[#D8CFBC] rounded-xl overflow-hidden p-4 2xl:p-5 flex flex-col gap-y-3 ${className} `}
         ref={ref}
         onMouseEnter={handleActiveAnimation}
         onMouseLeave={handleDeactiveAnimation}

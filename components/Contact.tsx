@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ToolTip } from "./ToolTip";
+import ToolTip from "./ToolTip";
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
@@ -30,7 +30,7 @@ export const Contact = ({ ref, className }: ContactProps) => {
 
     return (
         <div
-            className={`h-full w-full p-5 flex justify-center items-center gap-x-12 text-lg relative bg-[#D8CFBC] rounded-xl overflow-hidden opacity-0 ${className} ${roboto.className}`}
+            className={`h-full w-full p-5 flex justify-center items-center gap-x-9 2xl:gap-x-12 text-[16px] 2xl:text-lg relative bg-[#D8CFBC] rounded-xl overflow-hidden opacity-0 ${className} ${roboto.className}`}
             ref={ref}
         >
             <a
@@ -74,11 +74,6 @@ export const Contact = ({ ref, className }: ContactProps) => {
                 RESUME
             </a>
 
-            <ToolTip
-                x={200}
-                y={200} // shift above the cursor (image height + margin)
-                alt={"string"}
-            />
         </div>
     );
 };

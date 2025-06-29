@@ -35,7 +35,7 @@ export const Providers: Providers[] = [
         img: <Image
             src={Backpack}
             alt={"Backpack"}
-            className="size-6 rounded-sm "
+            className="size-6 rounded-sm h-full "
             unoptimized
         />,
         img2: <Image

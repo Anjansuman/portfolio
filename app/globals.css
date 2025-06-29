@@ -5,3 +5,15 @@
     border-bottom: 1px solid gray;
     border-radius: 0 0 7px 0;
 }
+
+@media (max-width: 1280px) {
+  .responsive-height {
+    height: 85vh;
+  }
+}
+
+@media (max-width: 1024px) {
+  .responsive-height {
+    height: 75vh;
+  }
+}
