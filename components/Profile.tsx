@@ -1,9 +1,5 @@
-"use client"
-
 import Image from "next/image";
 import profile from "../public/profile.jpg";
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
 
 interface ProfileProps {
     ref?: React.Ref<HTMLDivElement>,
@@ -20,7 +16,7 @@ export const Profile = ({ ref, className }: ProfileProps) => {
             src={profile}
             alt={"Anjan Suman"}
             unoptimized
-            className="w-fit h-fit object-fill "
+            className="w-full h-full object-cover object-top lg:object-center "
         />
     </div>
 }

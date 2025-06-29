@@ -49,7 +49,7 @@ export default function ToolTip({
                 createPortal(
                     <div
                         ref={tooltipRef}
-                        className={`fixed z-[9999] pointer-events-none whitespace-nowrap bg-neutral-200 text-black text-sm px-2 py-1 rounded shadow-md transition-opacity duration-200 ${roboto.className} ${className}`}
+                        className={`fixed z-[9999] pointer-events-none whitespace-nowrap bg-[#0f0f0f] text-[#D8CFBC] text-sm px-2 py-1 rounded shadow-md transition-opacity duration-200 ${roboto.className} ${className}`}
                         style={{ left: coords.x, top: coords.y }}
                     >
                         {text}

@@ -11,7 +11,7 @@ export const Projects = ({ ref, className }: ProjectsProps) => {
 
     
 
-    return <div className={`h-full w-full p-5 relative bg-[#D8CFBC] rounded-xl flex flex-col justify-start items-start gap-y-3 overflow-hidden opacity-0 ${className} `}
+    return <div className={`h-full w-full p-5 relative bg-[#D8CFBC] rounded-xl flex flex-col justify-start gap-y-3 overflow-hidden opacity-0 ${className} `}
         ref={ref}
     >
         <div className="text-2xl w-full border-b-2 border-[#0f0f0f] pb-1 ">

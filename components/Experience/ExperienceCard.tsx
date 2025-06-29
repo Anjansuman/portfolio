@@ -31,7 +31,7 @@ export const ExperienceCard = ({ company, className }: ExperienceCardProps) => {
                     <div className="text-[#3d3932] xl:text-[14px] 2xl:text-lg ">
                         {experience?.role}
                     </div>
-                    <div className={`text-[#3d3932] text-[10px] ${roboto.className} `}>
+                    <div className={`text-[#3d3932] text-[10px] 2xl:text-xs ${roboto.className} `}>
                         {experience?.duration}
                     </div>
                 </div>
