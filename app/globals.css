@@ -17,3 +17,10 @@
     height: 75vh;
   }
 }
+
+@theme {
+  --breakpoint-xs: 375px;
+  --breakpoint-md2: 853px;
+  --breakpoint-md3: 930px;
+  --breakpoint-xl2: 1354px;
+}

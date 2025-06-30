@@ -24,7 +24,7 @@ export const Name = ({ ref, className }: NameProps) => {
                 Full-stack WEB-2/WEB-3 developer
             </div>
         </div>
-        <div className={`text-justify text-xs 2xl:text-sm ${roboto.className} `}>
+        <div className={`text-justify text-xs md2:text-sm lg:text-xs 2xl:text-sm ${roboto.className} `}>
             A full-stack developer with a keen focus on pioneering the next generation of the web: Web3. Specializing in scalable, high-performance applications, leveraging a modern tech stack — including TypeScript, Next.js, Tailwind CSS, Node.js, and Solidity — to architect robust solutions across frontend, backend, and blockchain layers. With a strong emphasis on clean architecture, seamless user experiences, and secure smart-contract integration, delivering reliable, end-to-end systems from concept through deployment.
         </div>
         <div className="flex justify-end items-center gap-x-3 ">

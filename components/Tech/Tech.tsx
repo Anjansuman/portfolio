@@ -42,7 +42,7 @@ export const Tech = ({ ref, className }: TechProps) => {
     }
 
     return <div
-        className={`p-5 bg-[#D8CFBC] rounded-xl flex flex-col gap-y-3 overflow-hidden ${className}`}
+        className={`p-4 lg:p-5 bg-[#D8CFBC] rounded-xl flex flex-col gap-y-3 overflow-hidden ${className}`}
         ref={ref}
     >
         <div className="text-2xl w-full border-b-2 border-[#0f0f0f] pb-1 ">
@@ -50,12 +50,12 @@ export const Tech = ({ ref, className }: TechProps) => {
         </div>
         {/* tech stack */}
         <div
-            className="w-full flex flex-wrap justify-start gap-2 "
+            className="w-full flex flex-wrap justify-start items-start gap-[5px] lg:gap-2 "
             ref={(el) => handleAnimation(el)}
         >
             {
                 LogoNames.map((name: string, index: number) => (
-                    <ToolTip text={name} key={index} >
+                    <ToolTip text={name} key={index} className="flex-shrink-0 " >
                         <Logo name={name} />
                     </ToolTip>
                 ))

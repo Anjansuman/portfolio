@@ -34,7 +34,7 @@ interface ProjectCard {
 }
 
 const ProjectCardLeft = ({ name, description, img, skills, github, live, className }: ProjectCard) => {
-    return <div className={`${className} w-full flex justify-between items-center gap-x-2 `}>
+    return <div className={`${className} w-full flex justify-start items-center gap-x-2 `}>
 
         {/* image and optional links */}
         <div className="flex flex-col justify-around items-start gap-y-2 ">
@@ -111,7 +111,7 @@ const ProjectCardLeft = ({ name, description, img, skills, github, live, classNa
 };
 
 const ProjectCardRight = ({ name, description, img, skills, github, live, className }: ProjectCard) => {
-    return <div className={`${className} w-full flex justify-between items-start gap-x-2 `}>
+    return <div className={`${className} w-full flex justify-end items-start gap-x-2 `}>
 
         {/* links */}
         <div className="h-full hidden 2xl:flex flex-col justify-center items-center gap-y-3 ">

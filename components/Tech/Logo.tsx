@@ -11,14 +11,17 @@ export const Logo = ({ name }: LogoProps) => {
 
   return (
     <div
-      className="logo size:16 2xl:size-18 rounded-md hover:bg-[#5654496a] transition-colors duration-200 ease-in-out cursor-pointer flex justify-center items-center flex-shrink-0 "
-      // title={name}
+      className="logo size:16 2xl:size-18 p-1 md3:p-2 rounded-md hover:bg-[#5654496a] bg-[#5654496a] transition-colors duration-200 ease-in-out cursor-pointer flex justify-center items-center flex-shrink-0 "
     >
-      {typeof found.url === "string" ? (
-        <img src={found.url} alt={name} width={60} />
-      ) : (
-        found.url
-      )}
+
+      <div className="size-12 md:size-[42px] md2:size-11 md3:size-12 xl:size-[42px] xl2:size-12 2xl:size-12 ">
+        {typeof found.url === "string" ?
+          <img src={found.url} alt={name} className="h-full w-full" />
+          :
+          found.url
+        }
+      </div>
+
     </div>
   );
 };

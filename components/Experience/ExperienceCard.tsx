@@ -21,7 +21,7 @@ export const ExperienceCard = ({ company, className }: ExperienceCardProps) => {
         }
     })
 
-    return <div className={`w-full h-full flex flex-col justify-around items-end text-end ${className} `}>
+    return <div className={`w-full h-full flex flex-col justify-around gap-y-2 items-end text-end ${className} `}>
         <div className="w-full flex justify-end gap-x-5 ">
             <div className="flex flex-col justify-around items-end text-end ">
                 <div className="text-[21px] 2xl:text-3xl">
@@ -47,7 +47,7 @@ export const ExperienceCard = ({ company, className }: ExperienceCardProps) => {
                 </div>
             </a>
         </div>
-        <div className={`text-xs 2xl:text-sm text-justify ${roboto.className} `}>
+        <div className={`text-xs md3:text-sm lg:text-xs 2xl:text-sm text-justify ${roboto.className} `}>
             {experience?.description}
         </div>
     </div>

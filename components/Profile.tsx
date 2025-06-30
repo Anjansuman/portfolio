@@ -9,7 +9,7 @@ interface ProfileProps {
 export const Profile = ({ ref, className }: ProfileProps) => {
 
     return <div
-        className={`w-full h-full relative bg-[#565449] rounded-xl overflow-hidden ${className}`}
+        className={`h-[80vw] w-full md:h-full relative bg-[#565449] rounded-xl overflow-hidden ${className}`}
         ref={ref}
     >
         <Image
