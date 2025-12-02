@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anjan Suman — Full Stack Developer",
+  title: "anjan",
   description: "Portfolio of Anjan Suman — Building web3, full-stack, and high-performance applications.",
   openGraph: {
     title: "Anjan Suman — Full Stack Developer",

@@ -17,8 +17,8 @@ export default function Piechart() {
           nameKey="title"
           startAngle={-90}
           endAngle={270}
-          innerRadius={30}
-          outerRadius={90}
+          innerRadius={25}
+          outerRadius={70}
           paddingAngle={8}
           cornerRadius={8}
           stroke="#737373"
@@ -31,3 +31,4 @@ export default function Piechart() {
     </div>
   );
 }
+

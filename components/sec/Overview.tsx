@@ -7,6 +7,7 @@ export default function Overview() {
             <div className="font-semibold text-neutral-200">
                 overview
             </div>
+            <div className="text-xs text-neutral-400">of me</div>
             <div className="w-full flex justify-between items-center gap-x-3">
                 <Piechart />
                 <div className="text-white text-xs text-justify font-extralight font-sans">

@@ -18,7 +18,7 @@ const techStack: TechItem[] = [
   { logo: "/tech/nodejs.png", text: "node.js", value: 10 },
   { logo: "/tech/prisma.png", text: "prisma", value: 7 },
   { logo: "/tech/postgresql.png", text: "postgresql", value: 10 },
-  { logo: "/tech/websockets.png", text: "websockets", value: 6 },
+  { logo: "/tech/websocket.png", text: "websocket", value: 6 },
   { logo: "/tech/docker.png", text: "docker", value: 10 },
   { logo: "/tech/redis.png", text: "redis", value: 8 },
   { logo: "/tech/kubernetes.png", text: "kubernetes", value: 4 },
@@ -44,19 +44,19 @@ const TECH_CHART_KEYS = [
 export default function Tech() {
   return (
     <div className="w-full text-neutral-400 flex flex-col gap-y-1">
-      <div className="font-semibold text-neutral-200">tech-stack</div>
+      <div className="font-semibold text-neutral-200">stack</div>
+        <div className="flex flex-col gap-y-0">
+        <div className="text-xs">I generally be with</div>
+        <div className="flex items-center justify-between gap-4">
+            <div className="w-full flex flex-wrap gap-2">
+            {techStack.map((t) => (
+                <TechComponent key={t.text} logo={t.logo} text={t.text} />
+            ))}
+            </div>
 
-      <div className="text-xs">I generally be with</div>
-
-      <div className="flex items-center justify-between gap-4">
-        <div className="w-full flex flex-wrap gap-2">
-          {techStack.map((t) => (
-            <TechComponent key={t.text} logo={t.logo} text={t.text} />
-          ))}
+            <TechChart />
         </div>
-
-        <TechChart />
-      </div>
+        </div>
     </div>
   );
 }

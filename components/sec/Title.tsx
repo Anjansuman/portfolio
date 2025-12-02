@@ -39,18 +39,20 @@ function Contacts() {
         { link: 'https://x.com/AnjanSuman8', title: 'X', tooltip: 'AnjanSuman8' },
         { link: 'https://github.com/Anjansuman', title: 'GITHUB', tooltip: 'Anjansuman' },
         { link: 'https://linkedin.com/in/anjansuman', title: 'LINKEDIN', tooltip: 'anjansuman' },
-        { link: 'https://drive.google.com/file/d/1tiMKLVbUUM6WfgVFRVZuQ5YMeupmLu_r/view?usp=drivesdk', title: 'RESUME', tooltip: 'resume' },
+        { link: 'mailto:anjansuman80@gmail.com', title: 'MAIL', tooltip: 'anjansuman80@gmail.com' }
     ]
 
     return (
         <div className="text-xs text-neutral-500 flex gap-x-2">
             {data.map((entry, i) => (
-                <ToolTipComponent content={entry.tooltip} >
+                <ToolTipComponent
+                    content={entry.tooltip}
+                    key={i}
+                >
                     <a
                         target="_blank"
                         href={entry.link}
                         className="cursor-pointer hover:underline transition"
-                        key={i}
                     >
                         {entry.title}
                     </a>
