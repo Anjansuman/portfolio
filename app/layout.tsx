@@ -20,12 +20,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "anjan",
-  description: "Portfolio of Anjan Suman — Building web3, full-stack, and high-performance applications.",
+  description: "portfolio of anjan, building web3, full stack, and high performance applications.",
   openGraph: {
-    title: "Anjan Suman — Full Stack Developer",
+    title: "anjan",
     description: "Explore projects, skills, and contact info.",
     url: "https://anjan-neon.vercel.app",
-    siteName: "Anjan Suman Portfolio",
+    siteName: "anjan",
     images: [
       {
         url: "/images/preview.jpg",
