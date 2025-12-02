@@ -1,10 +1,17 @@
+import Piechart from "./Piechart";
 
 
 export default function Overview() {
     return (
-        <div className="w-full">
-            <div className="w-full flex justify-start text-xl">
-                Overview
+        <div className="">
+            <div className="font-semibold text-neutral-200">
+                overview
+            </div>
+            <div className="w-full flex justify-between items-center gap-x-3">
+                <Piechart />
+                <div className="text-white text-xs text-justify font-extralight font-sans">
+                    I’m someone who enjoys building things end-to-end and understanding how all the pieces fit together. I like working on ideas from their early shape through to something real that people can use, paying attention to structure, clarity, and long-term reliability. I care about how systems feel to use just as much as how they’re designed behind the scenes, and I naturally gravitate toward thoughtful, well-built solutions rather than quick fixes.
+                </div>
             </div>
         </div>
     );

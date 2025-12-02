@@ -2,10 +2,10 @@ import { GitHubCalendar } from "react-github-calendar";
 
 export default function GithubContributions() {
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="w-full flex justify-center items-center text-neutral-300">
       <GitHubCalendar
         username={'Anjansuman'}
-        blockSize={8}
+        blockSize={9}
         blockMargin={3}
         fontSize={10}
         colorScheme={'dark'}
@@ -15,7 +15,6 @@ export default function GithubContributions() {
         style={{
           width: '100%',
           maxWidth: '100%',
-          color: 'white',
         }}
       />
     </div>
