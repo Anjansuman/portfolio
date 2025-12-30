@@ -59,8 +59,8 @@ export default function RootLayout({
       >
 
         <LenisProvider>
-          <div className={`h-full w-full font-sans bg-[#121212] text-white flex justify-center select-none `}>
-            <div className="h-full max-w-[45vw] py-20 ">
+          <div className={`h-full w-full font-sans bg-[#09090B] text-white flex justify-center select-none `}>
+            <div className="h-full  ">
               {children}
               <Footer />
             </div>

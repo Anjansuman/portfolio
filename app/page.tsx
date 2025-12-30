@@ -13,19 +13,19 @@ import Line from "@/components/ui/Line";
 export default function Page() {
 
     return (
-        <div className="flex flex-col items-center gap-y-6">
-            <Title />
-            <GithubContributions />
+        <div className="w-full flex flex-col items-center ">
+            <Title className="layout-width layout-side-border layout-padding " />
+            <GithubContributions className="layout-width layout-side-border layout-padding" />
             <Line />
-            <Overview />
+            <Overview className="layout-width layout-side-border layout-padding" />
             <Line />
-            <Experience />
+            <Experience className="layout-width layout-side-border layout-padding" />
             <Line />
-            <Projects />
+            <Projects className="layout-width layout-side-border layout-padding" />
             <Line />
-            <Tech />
+            <Tech className="layout-width layout-side-border layout-padding" />
             <Line />
-            <Interested />
+            <Interested className="layout-width layout-side-border layout-padding" />
             <DustParticles particleColor={0xfdf9f0} />
         </div>
     );

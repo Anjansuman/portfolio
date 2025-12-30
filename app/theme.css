@@ -1,0 +1,15 @@
+
+
+.layout-width {
+    width: 50vw; 
+}
+
+.layout-side-border {
+    border-width: 0px 1px 0px 1px;
+    border-color: #1C1C1E;
+}
+
+.layout-padding {
+    padding: 10px 20px 10px 20px;
+}
+

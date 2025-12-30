@@ -1,9 +1,14 @@
+import { cn } from "@/lib/utils";
 import { projects } from "../data/projects";
 import ProjectType from "../types/project-type";
 
-export default function Projects() {
+export default function Projects({ className }: { className?: string }) {
     return (
-        <div className="w-full">
+        <div className={cn(
+            "w-full",
+            className
+        )}
+        >
             <div className="mb-2">
                 <div className="font-semibold text-neutral-200">
                     projects
@@ -19,7 +24,7 @@ export default function Projects() {
     );
 }
 
-function ProjectCard({ project }: { project: ProjectType}) {
+function ProjectCard({ project }: { project: ProjectType }) {
 
     function truncate(str: string) {
         if (str.length > 20) return str.substring(0, 60) + '...';

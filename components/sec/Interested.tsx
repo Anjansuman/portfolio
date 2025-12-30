@@ -1,9 +1,13 @@
 import { IoIosMail } from "react-icons/io";
 import { BsTwitterX } from "react-icons/bs";
+import { cn } from "@/lib/utils";
 
-export default function Interested() {
+export default function Interested({ className }: { className?: string }) {
     return (
-        <div className="flex flex-col gap-y-6">
+        <div className={cn(
+            "flex flex-col gap-y-6",
+            className
+        )}>
             <p className="text-sm text-neutral-500 leading-relaxed">
                 If you&apos;re interested in collaborating and building some cool things,
                 feel free to dm me on{" "}

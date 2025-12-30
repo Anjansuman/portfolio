@@ -2,15 +2,20 @@ import Image from "next/image";
 import { Quicksand } from "next/font/google";
 import ToolTipComponent from "../ui/TooltipComponent";
 import BlueTick from "../ui/BlueTick";
+import { cn } from "@/lib/utils";
 
 const quicksand = Quicksand({
     subsets: ["latin"],
     weight: ["400", "600", "700"],
 });
 
-export default function Title() {
+export default function Title({ className }: { className?: string }) {
     return (
-        <div className="w-full flex items-center justify-between">
+        <div className={cn(
+            `w-full flex items-center justify-between `,
+            className,
+        )}
+        >
             <div className="flex flex-col ">
                 <div className={`text-white text-3xl ${quicksand.className} font-extrabold flex items-center gap-x-1`}>
                     <div>

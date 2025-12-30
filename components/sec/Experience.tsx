@@ -2,9 +2,13 @@ import { cn } from "@/lib/utils";
 import { experiences } from "../data/experiences";
 import ExperienceType from "../types/experience-type";
 
-export default function Experience() {
+export default function Experience({ className }: { className?: string }) {
     return (
-        <div className="w-full ">
+        <div className={cn(
+            "w-full ",
+            className
+        )}
+        >
             <div className="mb-2">
                 <div className="font-semibold text-neutral-200">
                     experiences

@@ -64,7 +64,10 @@ function SocialLinks() {
     return (
         <div className="flex items-center gap-3 text-neutral-300">
             {socialLinks.map(({ href, label, Icon, tooltip, size }) => (
-                <ToolTipComponent content={tooltip}>
+                <ToolTipComponent
+                    key={tooltip}
+                    content={tooltip}
+                >
                     <a
                         key={label}
                         href={href}

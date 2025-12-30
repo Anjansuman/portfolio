@@ -1,9 +1,10 @@
+import { cn } from "@/lib/utils";
 import Piechart from "./Piechart";
 
 
-export default function Overview() {
+export default function Overview({ className }: { className?: string }) {
     return (
-        <div className="">
+        <div className={cn(className)}>
             <div className="font-semibold text-neutral-200">
                 overview
             </div>
