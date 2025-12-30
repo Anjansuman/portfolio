@@ -1,14 +1,12 @@
 import { cn } from "@/lib/utils";
 import Piechart from "./Piechart";
+import Heading from "../ui/Heading";
 
 
 export default function Overview({ className }: { className?: string }) {
     return (
         <div className={cn(className)}>
-            <div className="font-semibold text-neutral-200">
-                overview
-            </div>
-            <div className="text-xs text-neutral-400">of me</div>
+            <Heading heading={'overview'} tag={'Of me'} />
             <div className="w-full flex justify-between items-center gap-x-3">
                 <Piechart />
                 <div className="text-white text-xs text-justify font-extralight font-sans">

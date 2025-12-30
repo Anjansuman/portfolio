@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Cell, Pie, PieChart } from "recharts";
+import Heading from "../ui/Heading";
 
 type TechItem = {
     logo: string;
@@ -49,9 +50,8 @@ export default function Tech({ className }: { className?: string }) {
             className
         )}
         >
-            <div className="font-semibold text-neutral-200">stack</div>
+            <Heading heading={'stack'} tag={'I generally be with'} />
             <div className="flex flex-col gap-y-0">
-                <div className="text-xs">I generally be with</div>
                 <div className="flex items-center justify-between gap-4">
                     <div className="w-full flex flex-wrap gap-2">
                         {techStack.map((t) => (

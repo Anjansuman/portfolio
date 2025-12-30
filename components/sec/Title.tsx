@@ -1,10 +1,11 @@
 import Image from "next/image";
-import { Quicksand } from "next/font/google";
+import { IBM_Plex_Sans } from "next/font/google";
 import ToolTipComponent from "../ui/TooltipComponent";
 import BlueTick from "../ui/BlueTick";
 import { cn } from "@/lib/utils";
 
-const quicksand = Quicksand({
+
+const ibm = IBM_Plex_Sans({
     subsets: ["latin"],
     weight: ["400", "600", "700"],
 });
@@ -17,9 +18,9 @@ export default function Title({ className }: { className?: string }) {
         )}
         >
             <div className="flex flex-col ">
-                <div className={`text-white text-3xl ${quicksand.className} font-extrabold flex items-center gap-x-1`}>
+                <div className={`text-white text-3xl ${ibm.className} font-extrabold flex items-center gap-x-1`}>
                     <div>
-                        Anjan
+                        Anĵan
                     </div>
                     <div className="flex items-center">
                         <BlueTick size={18} />
@@ -30,9 +31,9 @@ export default function Title({ className }: { className?: string }) {
             <Image
                 src={'/images/profile.jpeg'}
                 alt={'profile'}
-                width={'100'}
-                height={'100'}
-                className="rounded-full border border-neutral-500"
+                width={'120'}
+                height={'120'}
+                className="rounded-full border border-[#1c1c1e] p-0.5 "
             />
         </div>
     );

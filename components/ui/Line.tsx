@@ -17,7 +17,7 @@ export default function Line() {
                             rgba(54, 54, 54, 0.2) 0px, 
                             rgba(255, 0, 100, 0) 2px, 
                             transparent 2px, 
-                            transparent 6px)
+                            transparent 8px)
                         `,
                     }}
                 />

@@ -9,7 +9,11 @@
     border-color: #1C1C1E;
 }
 
-.layout-padding {
-    padding: 10px 20px 10px 20px;
+.layout-bottom-border {
+    border-bottom: 1px solid #1C1C1E;
 }
 
+
+.layout-padding {
+    padding: 10px 20px;
+}

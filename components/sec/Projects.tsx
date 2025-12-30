@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { projects } from "../data/projects";
 import ProjectType from "../types/project-type";
+import Heading from "../ui/Heading";
 
 export default function Projects({ className }: { className?: string }) {
     return (
@@ -9,12 +10,7 @@ export default function Projects({ className }: { className?: string }) {
             className
         )}
         >
-            <div className="mb-2">
-                <div className="font-semibold text-neutral-200">
-                    projects
-                </div>
-                <div className="text-xs text-neutral-400">I built</div>
-            </div>
+            <Heading heading={'projects'} tag={"I've built"} />
             <div className="flex flex-col gap-y-2 ">
                 {projects.map((project) => (
                     <ProjectCard project={project} />

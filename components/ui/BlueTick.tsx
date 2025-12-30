@@ -45,7 +45,7 @@ const BlueTick: React.FC<BlueTickProps> = ({
                 />
                 <polygon
                     points="36.94,66.3 17.5,46.87 27.2,37.16 36.94,46.9 60.11,23.7 69.81,33.39"
-                    fill="rgb(255,255,255)"
+                    fill="#1C1C1E"
                 />
             </g>
         </svg>

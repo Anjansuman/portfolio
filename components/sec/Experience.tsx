@@ -1,6 +1,13 @@
 import { cn } from "@/lib/utils";
 import { experiences } from "../data/experiences";
 import ExperienceType from "../types/experience-type";
+import { IBM_Plex_Sans } from "next/font/google";
+import Heading from "../ui/Heading";
+
+const ibm = IBM_Plex_Sans({
+    subsets: ["latin"],
+    weight: ["400", "600", "700"],
+});
 
 export default function Experience({ className }: { className?: string }) {
     return (
@@ -9,12 +16,7 @@ export default function Experience({ className }: { className?: string }) {
             className
         )}
         >
-            <div className="mb-2">
-                <div className="font-semibold text-neutral-200">
-                    experiences
-                </div>
-                <div className="text-xs text-neutral-400">I had</div>
-            </div>
+            <Heading heading={'experience'} tag={'I had'} />
             <div className="w-full flex items-center justify-between gap-4">
                 <div className="w-full flex flex-wrap gap-2">
                     {experiences.map((exp, i) => (
@@ -31,7 +33,7 @@ export default function Experience({ className }: { className?: string }) {
 
 function ExperienceCard({ experience }: { experience: ExperienceType }) {
     return (
-        <div className="w-full flex flex-col text-sm text-neutral-500">
+        <div className="w-full flex flex-col text-sm text-neutral-500 layout-padding ">
             <div className="flex justify-between items-center">
                 <div className="text-base text-neutral-300">
                     {experience.company}
