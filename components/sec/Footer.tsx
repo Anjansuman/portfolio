@@ -4,10 +4,15 @@ import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaFileLines } from "react-icons/fa6";
 import ToolTipComponent from "../ui/TooltipComponent";
+import { cn } from "@/lib/utils";
 
-export default function Footer() {
+export default function Footer({ className }: { className?: string }) {
     return (
-        <div className="w-full flex justify-between items-center text-sm text-neutral-500">
+        <div className={cn(
+            "w-full flex justify-between items-center text-sm text-neutral-500",
+            className,
+            )}
+            >
             <div>&copy; 2025 anjan</div>
             <SocialLinks />
         </div>
@@ -62,7 +67,10 @@ const socialLinks: SocialLink[] = [
 
 function SocialLinks() {
     return (
-        <div className="flex items-center gap-3 text-neutral-300">
+        <div className={cn(
+            "flex items-center gap-3 text-neutral-300",
+        )}
+        >
             {socialLinks.map(({ href, label, Icon, tooltip, size }) => (
                 <ToolTipComponent
                     key={tooltip}

@@ -62,7 +62,6 @@ export default function RootLayout({
           <div className={`h-full w-full font-sans bg-[#09090B] text-white flex justify-center select-none `}>
             <div className="h-full  ">
               {children}
-              <Footer />
             </div>
           </div>
         </LenisProvider>

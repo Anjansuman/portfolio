@@ -6,7 +6,7 @@ export default function Interested({ className }: { className?: string }) {
     return (
         <div className={cn(
             "flex flex-col gap-y-6",
-            className
+            className,
         )}>
             <p className="text-sm text-neutral-500 leading-relaxed">
                 If you&apos;re interested in collaborating and building some cool things,

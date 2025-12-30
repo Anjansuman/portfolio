@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Cell, Pie, PieChart } from "recharts";
 import Heading from "../ui/Heading";
+import { HorizontalGap, VerticalGap } from "../ui/Gap";
 
 type TechItem = {
     logo: string;
@@ -46,21 +47,24 @@ const TECH_CHART_KEYS = [
 export default function Tech({ className }: { className?: string }) {
     return (
         <div className={cn(
-            "w-full text-neutral-400 flex flex-col gap-y-1",
+            "w-full text-neutral-400 flex flex-col ",
             className
         )}
         >
             <Heading heading={'stack'} tag={'I generally be with'} />
-            <div className="flex flex-col gap-y-0">
+            <div className="relative flex flex-col gap-y-0">
+                <VerticalGap className="h-full absolute left-0 top-0 border-y-0 border-l-0 " />
+                <HorizontalGap className="border-x-0 border-t-0 " />
                 <div className="flex items-center justify-between gap-4">
-                    <div className="w-full flex flex-wrap gap-2">
+                    <div className="w-full flex flex-wrap gap-2 layout-double-padding">
                         {techStack.map((t) => (
                             <TechComponent key={t.text} logo={t.logo} text={t.text} />
                         ))}
                     </div>
-
                     <TechChart />
                 </div>
+                <VerticalGap className="h-full absolute right-0 top-0 border-y-0 border-r-0 " />
+                <HorizontalGap className="border-x-0 border-b-0 " />
             </div>
         </div>
     );
@@ -92,7 +96,8 @@ function TechChart() {
         }));
 
     return (
-        <div className="flex items-center justify-center">
+        <div className="h-full flex items-center justify-center relative">
+            {/* <VerticalGap className="h-full absolute left-0 top-0 border-y-0 " /> */}
             <PieChart width={180} height={180}>
                 <Pie
                     data={data}

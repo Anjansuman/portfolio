@@ -42,7 +42,7 @@ function ProjectCard({ project }: { project: ProjectType }) {
             <Heading
                 logo={project.logo}
                 heading={project.title}
-                tag={project.year}
+                tag2={project.year}
                 size={'xs'}
                 className="px-3"
             />

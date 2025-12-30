@@ -1,5 +1,6 @@
 'use client';
 import Experience from "@/components/sec/Experience";
+import Footer from "@/components/sec/Footer";
 import GithubContributions from "@/components/sec/GithubContributions";
 import Interested from "@/components/sec/Interested";
 import Overview from "@/components/sec/Overview";
@@ -26,7 +27,10 @@ export default function Page() {
             <Line />
             <Tech className="layout-width layout-side-border " />
             <Line />
-            <Interested className="layout-width layout-side-border " />
+            <Interested className="layout-width layout-side-border layout-padding " />
+            <HorizontalGap />
+            <Footer className="layout-width layout-side-border layout-padding " />
+            <Line />
             {/* <DustParticles particleColor={0xfdf9f0} /> */}
         </div>
     );

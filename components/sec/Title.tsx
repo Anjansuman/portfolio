@@ -33,7 +33,7 @@ export default function Title({ className }: { className?: string }) {
                 alt={'profile'}
                 width={'120'}
                 height={'120'}
-                className="rounded-full border border-[#1c1c1e] p-0.5 "
+                className="rounded-full border border-[#1C1C1E] p-1 "
             />
         </div>
     );
