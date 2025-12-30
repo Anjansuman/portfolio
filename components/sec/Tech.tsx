@@ -2,7 +2,6 @@
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { Cell, Pie, PieChart } from "recharts";
 import Heading from "../ui/Heading";
 import { HorizontalGap, VerticalGap } from "../ui/Gap";
 
@@ -61,7 +60,7 @@ export default function Tech({ className }: { className?: string }) {
                             <TechComponent key={t.text} logo={t.logo} text={t.text} />
                         ))}
                     </div>
-                    <TechChart />
+                    {/* <TechChart /> */}
                 </div>
                 <VerticalGap className="h-full absolute right-0 top-0 border-y-0 border-r-0 " />
                 <HorizontalGap className="border-x-0 border-b-0 " />
@@ -84,38 +83,38 @@ function TechComponent({ logo, text }: { logo: string; text: string }) {
     );
 }
 
-function TechChart() {
-    const data = techStack
-        .filter((tech) =>
-            TECH_CHART_KEYS.includes(tech.text as (typeof TECH_CHART_KEYS)[number])
-        )
-        .map((tech) => ({
-            title: tech.text,
-            value: tech.value,
-            color: techColors[tech.text] ?? "#737373",
-        }));
+// function TechChart() {
+//     const data = techStack
+//         .filter((tech) =>
+//             TECH_CHART_KEYS.includes(tech.text as (typeof TECH_CHART_KEYS)[number])
+//         )
+//         .map((tech) => ({
+//             title: tech.text,
+//             value: tech.value,
+//             color: techColors[tech.text] ?? "#737373",
+//         }));
 
-    return (
-        <div className="h-full flex items-center justify-center relative">
-            {/* <VerticalGap className="h-full absolute left-0 top-0 border-y-0 " /> */}
-            <PieChart width={180} height={180}>
-                <Pie
-                    data={data}
-                    dataKey="value"
-                    nameKey="title"
-                    startAngle={-90}
-                    endAngle={270}
-                    innerRadius={25}
-                    outerRadius={65}
-                    paddingAngle={6}
-                    cornerRadius={6}
-                >
-                    {data.map((entry, index) => (
-                        <Cell key={index} stroke={entry.color} fill={entry.color} />
-                    ))}
-                </Pie>
-            </PieChart>
-        </div>
-    );
-}
+//     return (
+//         <div className="h-full flex items-center justify-center relative">
+//             {/* <VerticalGap className="h-full absolute left-0 top-0 border-y-0 " /> */}
+//             <PieChart width={180} height={180}>
+//                 <Pie
+//                     data={data}
+//                     dataKey="value"
+//                     nameKey="title"
+//                     startAngle={-90}
+//                     endAngle={270}
+//                     innerRadius={25}
+//                     outerRadius={65}
+//                     paddingAngle={6}
+//                     cornerRadius={6}
+//                 >
+//                     {data.map((entry, index) => (
+//                         <Cell key={index} stroke={entry.color} fill={entry.color} />
+//                     ))}
+//                 </Pie>
+//             </PieChart>
+//         </div>
+//     );
+// }
 
