@@ -1,6 +1,7 @@
 
 export default interface ProjectType {
     title: string,
+    logo?: string,
     year: string,
     description: string,
     images: string[],

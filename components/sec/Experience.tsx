@@ -1,31 +1,35 @@
 import { cn } from "@/lib/utils";
 import { experiences } from "../data/experiences";
 import ExperienceType from "../types/experience-type";
-import { IBM_Plex_Sans } from "next/font/google";
 import Heading from "../ui/Heading";
-
-const ibm = IBM_Plex_Sans({
-    subsets: ["latin"],
-    weight: ["400", "600", "700"],
-});
+import { HorizontalGap, VerticalGap } from "../ui/Gap";
 
 export default function Experience({ className }: { className?: string }) {
     return (
         <div className={cn(
-            "w-full ",
+            "w-full h-full ",
             className
         )}
         >
-            <Heading heading={'experience'} tag={'I had'} />
-            <div className="w-full flex items-center justify-between gap-4">
+            <Heading heading={'experiences'} tag={'I had'} />
+            <div className="w-full h-full relative flex items-center justify-between gap-4">
+                <VerticalGap className="h-full absolute border-y-0 border-l-0 " />
                 <div className="w-full flex flex-wrap gap-2">
+                    <HorizontalGap className="border-x-0 border-t-0 " />
                     {experiences.map((exp, i) => (
-                        <ExperienceCard
-                            experience={exp}
-                            key={i}
-                        />
+                        <>
+                            <ExperienceCard
+                                experience={exp}
+                                key={i}
+                            />
+                            {i < experiences.length - 1 && (
+                                <HorizontalGap className="border-x-0" />
+                            )}
+                        </>
                     ))}
+                    <HorizontalGap className="border-x-0 border-b-0" />
                 </div>
+                <VerticalGap className="h-full absolute right-0 border-y-0 border-r-0 " />
             </div>
         </div>
     );
@@ -33,19 +37,18 @@ export default function Experience({ className }: { className?: string }) {
 
 function ExperienceCard({ experience }: { experience: ExperienceType }) {
     return (
-        <div className="w-full flex flex-col text-sm text-neutral-500 layout-padding ">
+        <div className="w-full flex flex-col text-sm text-neutral-500 ">
             <div className="flex justify-between items-center">
-                <div className="text-base text-neutral-300">
-                    {experience.company}
-                </div>
-                <div className="text-neutral-600 text-xs italic">
-                    {experience.dates}
-                </div>
+                <Heading
+                    heading={experience.company}
+                    tag={experience.role}
+                    tag2={experience.dates}
+                    size={'sm'}
+                    className="px-3"
+                />
             </div>
 
-            <div className="text-neutral-400 italic text-xs">
-                {experience.role}
-            </div>
+            <div className="flex flex-col layout-double-padding">
 
             <div className="mt-2 text-justify">
                 {experience.description}
@@ -55,6 +58,7 @@ function ExperienceCard({ experience }: { experience: ExperienceType }) {
                 {experience.tech.map((t) => (
                     <ExperienceTechCard key={t} tech={t} />
                 ))}
+            </div>
             </div>
         </div>
     );

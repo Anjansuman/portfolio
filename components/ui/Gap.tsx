@@ -13,7 +13,7 @@ export function HorizontalGap({ className }: { className?: string }) {
 export function VerticalGap({ className }: { className?: string }) {
     return (
         <div className={cn(
-            'w-4 h-full border border-[#1c1c1e]',
+            'w-4 self-stretch border border-[#1c1c1e]',
             className
         )}></div>
     );

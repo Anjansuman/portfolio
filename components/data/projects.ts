@@ -3,6 +3,7 @@ import ProjectType from "../types/project-type";
 export const projects: ProjectType[] = [
     {
         title: 'winterfell',
+        logo: '',
         year: '2025',
         description: 'an anchor solana smart contract generator with features like generating streams, building, testing, deploying, seemlessly with the real-time logs.',
         images: [],
@@ -14,6 +15,7 @@ export const projects: ProjectType[] = [
     },
     {
         title: 'nocturn',
+        logo: '',
         year: '2025',
         description: 'an real-time quiz platform with role based quiz access.',
         images: [],
@@ -23,6 +25,7 @@ export const projects: ProjectType[] = [
     },
     {
         title: 'hashed',
+        logo: '',
         year: '2025',
         description: 'a light weight crypto wallet browser extension with all the features like sending, receiving, viewing, creating from a HD wallet, creating custom wallets.',
         images: [],
@@ -32,6 +35,7 @@ export const projects: ProjectType[] = [
     },
     {
         title: 'incert',
+        logo: '',
         year: '2025',
         description: 'a certificate verification and creation platform which uses solana chain for certificates addresses and machine learning for data fetching and manipulation in the certificates.',
         images: [],
@@ -41,6 +45,7 @@ export const projects: ProjectType[] = [
     },
     {
         title: 'minto',
+        logo: '',
         year: '2025',
         description: 'a NFT minting platform where an admin can create NFTs and the users can buy them.',
         images: [],
@@ -51,6 +56,7 @@ export const projects: ProjectType[] = [
     },
     {
         title: 'portfolio',
+        logo: '',
         year: '2025',
         description: "the thing you're looking at.",
         images: [],

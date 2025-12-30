@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { projects } from "../data/projects";
 import ProjectType from "../types/project-type";
 import Heading from "../ui/Heading";
+import { HorizontalGap, VerticalGap } from "../ui/Gap";
 
 export default function Projects({ className }: { className?: string }) {
     return (
@@ -11,10 +12,19 @@ export default function Projects({ className }: { className?: string }) {
         )}
         >
             <Heading heading={'projects'} tag={"I've built"} />
-            <div className="flex flex-col gap-y-2 ">
-                {projects.map((project) => (
-                    <ProjectCard project={project} />
+            <div className="relative flex flex-col gap-y-2 ">
+                <VerticalGap className="h-full absolute border-y-0 border-l-0 " />
+                <HorizontalGap className="border-x-0 border-t-0 " />
+                {projects.map((project, i) => (
+                    <>
+                        <ProjectCard project={project} />
+                        {i < projects.length - 1 && (
+                            <HorizontalGap className="border-x-0" />
+                        )}
+                    </>
                 ))}
+                <HorizontalGap className="border-x-0 border-b-0" />
+                <VerticalGap className="h-full absolute right-0 border-y-0 border-r-0 " />
             </div>
         </div>
     );
@@ -28,16 +38,15 @@ function ProjectCard({ project }: { project: ProjectType }) {
     }
 
     return (
-        <div className="w-full bg-[#17171A] flex flex-col gap-y-2 text-sm text-neutral-500 px-4 py-3 rounded-md cursor-pointer ">
-            <div className="flex justify-between items-center">
-                <div className="text-sm text-neutral-300">
-                    {project.title}
-                </div>
-                <div className="text-neutral-600 text-xs italic">
-                    {project.year}
-                </div>
-            </div>
-            <div className="text-xs">
+        <div className="w-full flex flex-col gap-y-2 text-sm text-neutral-500 cursor-pointer ">
+            <Heading
+                logo={project.logo}
+                heading={project.title}
+                tag={project.year}
+                size={'xs'}
+                className="px-3"
+            />
+            <div className="text-xs layout-double-padding">
                 {truncate(project.description)}
             </div>
         </div>

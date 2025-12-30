@@ -17,3 +17,7 @@
 .layout-padding {
     padding: 10px 20px;
 }
+
+.layout-double-padding {
+    padding: 10px 30px;
+}
