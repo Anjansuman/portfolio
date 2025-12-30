@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
+import LenisProvider from "@/components/ui/LenisProvider";
+import Footer from "@/components/sec/Footer";
 
 const dsd = DM_Serif_Display({
-    weight: "400",
-    style: "normal",
-    subsets: ["latin"]
+  weight: "400",
+  style: "normal",
+  subsets: ["latin"]
 });
 
 const geistSans = Geist({
@@ -55,7 +57,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${dsd.className} antialiased`}
       >
-        {children}
+
+        <LenisProvider>
+          <div className={`h-full w-full font-sans bg-[#121212] text-white flex justify-center select-none `}>
+            <div className="h-full max-w-[45vw] py-20 ">
+              {children}
+              <Footer />
+            </div>
+          </div>
+        </LenisProvider>
       </body>
     </html>
   );

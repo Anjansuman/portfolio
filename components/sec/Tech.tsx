@@ -14,6 +14,7 @@ const techStack: TechItem[] = [
   { logo: "/tech/typescript.png", text: "typescript", value: 15 },
   { logo: "/tech/rust.png", text: "rust", value: 3 },
   { logo: "/tech/solana.png", text: "solana", value: 6 },
+  { logo: '/tech/anchor.png', text: 'anchor', value: 6 },
   { logo: "/tech/nextjs.png", text: "next.js", value: 10 },
   { logo: "/tech/nodejs.png", text: "node.js", value: 10 },
   { logo: "/tech/prisma.png", text: "prisma", value: 7 },

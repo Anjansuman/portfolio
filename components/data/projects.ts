@@ -1,0 +1,61 @@
+import ProjectType from "../types/project-type";
+
+export const projects: ProjectType[] = [
+    {
+        title: 'winterfell',
+        year: '2025',
+        description: 'an anchor solana smart contract generator with features like generating streams, building, testing, deploying, seemlessly with the real-time logs.',
+        images: [],
+        tech: ['typescript', 'next.js', 'node.js', 'express.js', 'prisma', 'postgresql', 'websocket', 'docker', 'redis-queues', 'redis-pub-subs', 'kubernetes', 'llm', 'aws', 'razorpay', 'turnstile'],
+        live: 'https://winterfell.dev',
+        repo: 'https://github.com/bottle-nex/winterfell',
+        isPrivate: true,
+        x: 'https://x.com/winterfell_dev',
+    },
+    {
+        title: 'nocturn',
+        year: '2025',
+        description: 'an real-time quiz platform with role based quiz access.',
+        images: [],
+        tech: ['typescript', 'next.js', 'node.js', 'express.js', 'prisma', 'postgresql', 'websocket', 'docker', 'redis-queues', 'redis-pub-subs', 'redis-cache', 'awx', 'anchor', 'solana'],
+        repo: 'https://github.com/celestium-x/nocturn',
+        isPrivate: false,
+    },
+    {
+        title: 'hashed',
+        year: '2025',
+        description: 'a light weight crypto wallet browser extension with all the features like sending, receiving, viewing, creating from a HD wallet, creating custom wallets.',
+        images: [],
+        tech: ['typescript', 'react.js', 'ethereum', 'extension', 'web3.js'],
+        repo: 'https://github.com/Anjansuman/hashed',
+        isPrivate: false,
+    },
+    {
+        title: 'incert',
+        year: '2025',
+        description: 'a certificate verification and creation platform which uses solana chain for certificates addresses and machine learning for data fetching and manipulation in the certificates.',
+        images: [],
+        tech: ['typescript', 'python', 'next.js', 'node.js', 'express.js', 'prisma', 'postgresql', 'docker', 'anchor', 'solana', 'ocr', 'machine learning'],
+        repo: 'https://github.com/Anjansuman/incert',
+        isPrivate: false,
+    },
+    {
+        title: 'minto',
+        year: '2025',
+        description: 'a NFT minting platform where an admin can create NFTs and the users can buy them.',
+        images: [],
+        tech: ['typescript', 'react.js', 'node.js', 'express.js', 'ethereum', 'solidity', 'truffle', 'ganache', 'pinata'],
+        live: 'https://',
+        repo: '',
+        isPrivate: false,
+    },
+    {
+        title: 'portfolio',
+        year: '2025',
+        description: "the thing you're looking at.",
+        images: [],
+        tech: ['typescript', 'next.js', 'zustand'],
+        repo: 'https://github.com/Anjansuman/portfolio',
+        isPrivate: false,
+    }
+];

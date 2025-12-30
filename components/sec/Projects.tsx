@@ -1,42 +1,5 @@
-
-interface ProjectType {
-    title: string,
-    year: string,
-    description: string,
-}
-
-const projects: ProjectType[] = [
-    {
-        title: 'winterfell',
-        year: '2025',
-        description: 'an anchor solana smart contract generator with features like building, testing, deploying seemlessly with the real-time logs.'
-    },
-    {
-        title: 'nocturn',
-        year: '2025',
-        description: 'an real-time quiz platform with role based quiz access.',
-    },
-    {
-        title: 'hashed',
-        year: '2025',
-        description: 'a light weight crypto wallet browser extension with all the features like sending, receiving, viewing, creating from a HD wallet, creating custom wallets.',
-    },
-    {
-        title: 'incert',
-        year: '2025',
-        description: 'a certificate verification and creation platform which uses solana chain for certificates addresses and machine learning for data fetching and manipulation in the certificates.',
-    },
-    {
-        title: 'minto',
-        year: '2025',
-        description: 'a NFT minting platform where an admin can create NFTs and the users can buy them.'
-    },
-    {
-        title: 'portfolio',
-        year: '2025',
-        description: "the thing you're looking at."
-    }
-];
+import { projects } from "../data/projects";
+import ProjectType from "../types/project-type";
 
 export default function Projects() {
     return (
@@ -56,10 +19,10 @@ export default function Projects() {
     );
 }
 
-function ProjectCard({ project }: { project: ProjectType }) {
+function ProjectCard({ project }: { project: ProjectType}) {
 
     function truncate(str: string) {
-        if(str.length > 20) return str.substring(0, 60) + '...';
+        if (str.length > 20) return str.substring(0, 60) + '...';
         else str;
     }
 
