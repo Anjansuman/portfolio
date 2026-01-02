@@ -2,6 +2,9 @@ import { cn } from "@/lib/utils";
 import Piechart from "./Piechart";
 import Heading from "../ui/Heading";
 import Dots from "../ui/Dots";
+import Image from "next/image";
+import { HorizontalGap, VerticalGap } from "../ui/Gap";
+import { user } from "../data/user";
 
 
 export default function Overview({ className }: { className?: string }) {
@@ -12,14 +15,33 @@ export default function Overview({ className }: { className?: string }) {
                 )}
             >
             <Heading heading={'overview'} tag={'Of me'} />
-            {/* <div className="w-full flex justify-between items-center gap-x-3">
-                <Piechart />
-                <div className="text-white text-xs text-justify font-extralight font-sans">
-                    I’m someone who enjoys building things end-to-end and understanding how all the pieces fit together. I like working on ideas from their early shape through to something real that people can use, paying attention to structure, clarity, and long-term reliability. I care about how systems feel to use just as much as how they’re designed behind the scenes, and I naturally gravitate toward thoughtful, well-built solutions rather than quick fixes.
+            <div className="relative h-80">
+                <div className="">
+                    <VerticalGap className="h-full absolute left-0 border-y-0 border-l-0 " />
+                    <VerticalGap className="h-full absolute right-0 border-y-0 border-r-0 " />
+                    <VerticalGap className="h-full absolute left-1/2 -translate-l-1/2 border-y-0 " />
+                    <HorizontalGap className="border-x-0 border-t-0 " />
+                    <HorizontalGap className="border-x-0 absolute bottom-0 border-b-0 " />
+                    <div className="layout-double-padding flex flex-col justify-start gap-y-4 ">
+                        {user.map((u, i) => (
+                            <div
+                                key={i}
+                                className="flex justify-start items-start gap-x-4 text-neutral-600"
+                            >
+                                <u.icon />
+                                <div>
+                                    {u.data}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div> */}
-            <div className="relative h-40">
-                <Dots />
+                {/* <Image
+                    src={'/images/city.jpg'}
+                    alt={'city'}
+                    fill
+                    className="object-cover grayscale "
+                /> */}
             </div>
         </div>
     );
