@@ -21,3 +21,41 @@
 .layout-double-padding {
     padding: 10px 30px;
 }
+.reveal-image {
+    z-index: 10;
+
+    --x: 50%;
+    --y: 50%;
+
+    /* DEFAULT: no reveal */
+    mask-image: radial-gradient(
+        circle 0px at var(--x) var(--y),
+        transparent 0%,
+        black 60%
+    );
+
+    -webkit-mask-image: radial-gradient(
+        circle 0px at var(--x) var(--y),
+        transparent 0%,
+        black 60%
+    );
+
+    transition:
+        mask-image 0.25s ease,
+        -webkit-mask-image 0.25s ease;
+}
+
+/* ✅ REVEAL ONLY ON HOVER */
+.group:hover .reveal-image {
+    mask-image: radial-gradient(
+        circle 140px at var(--x) var(--y),
+        transparent 0%,
+        black 65%
+    );
+
+    -webkit-mask-image: radial-gradient(
+        circle 140px at var(--x) var(--y),
+        transparent 0%,
+        black 65%
+    );
+}
