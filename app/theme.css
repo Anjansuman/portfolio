@@ -1,4 +1,6 @@
-
+@theme {
+    --color-primary: #1c1c1e;
+}
 
 .layout-width {
     width: 50vw; 
@@ -12,7 +14,6 @@
 .layout-bottom-border {
     border-bottom: 1px solid #1C1C1E;
 }
-
 
 .layout-padding {
     padding: 10px 20px;
@@ -45,7 +46,6 @@
         -webkit-mask-image 0.25s ease;
 }
 
-/* ✅ REVEAL ONLY ON HOVER */
 .group:hover .reveal-image {
     mask-image: radial-gradient(
         circle 140px at var(--x) var(--y),

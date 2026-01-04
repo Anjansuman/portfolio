@@ -5,7 +5,6 @@ import Heading from '../ui/Heading';
 import { user } from '../data/user';
 import { HorizontalGap, VerticalGap } from '../ui/Gap';
 import { Iceland } from 'next/font/google';
-import { IconType } from 'react-icons/lib';
 
 const iceland = Iceland({
     subsets: ['latin'],
@@ -54,9 +53,9 @@ export default function Overview() {
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            /* ===============================
-               1️⃣ DRAW PIXEL MASK
-            =============================== */
+            /* =====================================
+               1️⃣ DRAW PERSISTENT PIXEL MASK
+            ===================================== */
             ctx.globalCompositeOperation = 'source-over';
             ctx.fillStyle = 'white';
 
@@ -72,9 +71,9 @@ export default function Overview() {
 
             ctx.globalAlpha = 1;
 
-            /* ===============================
+            /* =====================================
                2️⃣ DRAW IMAGE + TEXT THROUGH MASK
-            =============================== */
+            ===================================== */
             ctx.globalCompositeOperation = 'source-in';
 
             // Image
@@ -82,28 +81,27 @@ export default function Overview() {
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
             ctx.filter = 'none';
 
-            // Perfectly centered Core Builder text
-            const text = 'Core Builder';
+            // Core Builder text (same material)
             ctx.fillStyle = 'white';
             ctx.font = '700 96px Iceland, sans-serif';
+            ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
-
-            const metrics = ctx.measureText(text);
-            const x = (canvas.width - metrics.width) / 2;
-            const y = canvas.height / 2;
-
-            ctx.fillText(text, x, y);
+            ctx.fillText(
+                'Core Builder',
+                canvas.width / 2,
+                canvas.height / 2
+            );
 
             ctx.globalCompositeOperation = 'source-over';
 
-            /* ===============================
-               3️⃣ CLEANUP
-            =============================== */
+            /* =====================================
+               3️⃣ CLEANUP OLD SAMPLES
+            ===================================== */
             samplesRef.current = samplesRef.current.filter(s => s.life > 0.05);
 
-            /* ===============================
-               4️⃣ ADD NEW SAMPLE
-            =============================== */
+            /* =====================================
+               4️⃣ ADD NEW SAMPLE (ON MOVE)
+            ===================================== */
             if (mouseRef.current && tick % SAMPLE_RATE === 0) {
                 const { x, y } = mouseRef.current;
                 const pixels: Pixel[] = [];
@@ -119,13 +117,18 @@ export default function Overview() {
                         const cy = py + PIXEL / 2;
                         const d = Math.hypot(cx - x, cy - y);
 
+                        // randomness ONLY HERE (creation)
                         if (d < BASE_RADIUS && Math.random() > 0.6) {
                             pixels.push({ x: px, y: py });
                         }
                     }
                 }
 
-                samplesRef.current.unshift({ pixels, life: 1 });
+                samplesRef.current.unshift({
+                    pixels,
+                    life: 1,
+                });
+
                 if (samplesRef.current.length > 25) {
                     samplesRef.current.pop();
                 }
@@ -147,9 +150,8 @@ export default function Overview() {
         <div className="relative layout-side-border">
             <Heading heading="overview" tag="Of me" />
 
-            {/* IMPORTANT: fixed height so canvas can center correctly */}
             <div
-                className="relative h-full overflow-hidden"
+                className="relative h-80 overflow-hidden"
                 onMouseMove={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     mouseRef.current = {
@@ -162,8 +164,8 @@ export default function Overview() {
                     samplesRef.current = [];
                 }}
             >
-                {/* USER DATA (PAINTED LAYER → CAN BE ERASED) */}
-                <div className="relative h-full z-10 pointer-events-none bg-black pb-5 ">
+                {/* TEXT BELOW (ALWAYS VISIBLE) */}
+                <div className="relative h-full z-10 pointer-events-none">
                     <VerticalGap className="h-full absolute left-0 border-y-0 border-l-0" />
                     <VerticalGap className="h-full absolute right-0 border-y-0 border-r-0" />
                     <HorizontalGap className="border-x-0 border-t-0" />
@@ -171,43 +173,20 @@ export default function Overview() {
 
                     <div className="layout-double-padding flex flex-col gap-y-4 text-neutral-200">
                         {user.map((u, i) => (
-                            <UserCapsule
-                                key={i}
-                                icon={u.icon}
-                                data={u.data}
-                                link={u.link}
-                            />
+                            <div key={i} className="flex items-center gap-x-4">
+                                <u.icon />
+                                <span>{u.data}</span>
+                            </div>
                         ))}
                     </div>
                 </div>
 
-                {/* CANVAS — REVEAL + ERASER */}
+                {/* CANVAS — IMAGE + CORE BUILDER AS ONE */}
                 <canvas
                     ref={canvasRef}
-                    className="
-                        absolute inset-0
-                        z-20
-                        pointer-events-none
-                        mix-blend-destination-out
-                    "
+                    className="absolute inset-0 z-0 pointer-events-none"
                 />
             </div>
         </div>
     );
 }
-
-function UserCapsule(u: { icon: IconType, data: string, link?: string }) {
-    return (
-        <div className="flex items-center gap-x-4">
-            <div className='flex justify-center items-center p-1 outline outline-[#1e1e1c] rounded-lg '>
-                <u.icon
-                    className='flex justify-center items-center bg-primary '
-                />
-            </div>
-            <span>{u.data}</span>
-        </div>
-    )
-}
-
-
-
