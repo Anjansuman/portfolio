@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @import "./theme.css";
 
+:root {
+    --color-primary-light: #e4e4e4;
+    --color-primary-dark: #1c1c1e;
+    --color-secondary-dark: #09090B;
+    --color-secondary-light: #09090B;
+}
+
 .custom-resizer::-webkit-resizer {
     border-right: 1px solid gray;
     border-bottom: 1px solid gray;
@@ -8,20 +15,20 @@
 }
 
 @media (max-width: 1280px) {
-  .responsive-height {
-    height: 85vh;
-  }
+    .responsive-height {
+        height: 85vh;
+    }
 }
 
 @media (max-width: 1024px) {
-  .responsive-height {
-    height: 75vh;
-  }
+    .responsive-height {
+        height: 75vh;
+    }
 }
 
 @theme {
-  --breakpoint-xs: 375px;
-  --breakpoint-md2: 853px;
-  --breakpoint-md3: 930px;
-  --breakpoint-xl2: 1354px;
+    --breakpoint-xs: 375px;
+    --breakpoint-md2: 853px;
+    --breakpoint-md3: 930px;
+    --breakpoint-xl2: 1354px;
 }

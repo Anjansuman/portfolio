@@ -84,16 +84,21 @@ export default function Overview() {
 
             // Perfectly centered Core Builder text
             const text = 'Core Builder';
-            ctx.fillStyle = 'white';
             ctx.font = '700 96px Iceland, sans-serif';
             ctx.textBaseline = 'middle';
+
+            // Background rectangle - you can change this color
+            ctx.fillStyle = 'red'; // Dark background
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Text - different color
+            ctx.fillStyle = '#ffffff'; // White text (or any color you want)
 
             const metrics = ctx.measureText(text);
             const x = (canvas.width - metrics.width) / 2;
             const y = canvas.height / 2;
 
             ctx.fillText(text, x, y);
-
             ctx.globalCompositeOperation = 'source-over';
 
             /* ===============================
@@ -163,7 +168,7 @@ export default function Overview() {
                 }}
             >
                 {/* USER DATA (PAINTED LAYER → CAN BE ERASED) */}
-                <div className="relative h-full z-10 pointer-events-none bg-black pb-5 ">
+                <div className="relative h-full z-10 pointer-events-none bg-secondary-dark pb-5 ">
                     <VerticalGap className="h-full absolute left-0 border-y-0 border-l-0" />
                     <VerticalGap className="h-full absolute right-0 border-y-0 border-r-0" />
                     <HorizontalGap className="border-x-0 border-t-0" />
@@ -188,7 +193,6 @@ export default function Overview() {
                         absolute inset-0
                         z-20
                         pointer-events-none
-                        mix-blend-destination-out
                     "
                 />
             </div>
@@ -199,15 +203,15 @@ export default function Overview() {
 function UserCapsule(u: { icon: IconType, data: string, link?: string }) {
     return (
         <div className="flex items-center gap-x-4">
-            <div className='flex justify-center items-center p-1 outline outline-[#1e1e1c] rounded-lg '>
+            <div
+                className='flex justify-center items-center bg-primary-dark p-1 rounded-lg border border-secondary-dark outline outline-primary-dark '
+            >
                 <u.icon
-                    className='flex justify-center items-center bg-primary '
+                    className='flex justify-center items-center '
                 />
             </div>
-            <span>{u.data}</span>
+                <span>{u.data}</span>
         </div>
     )
 }
-
-
 

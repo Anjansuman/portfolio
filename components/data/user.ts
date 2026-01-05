@@ -11,7 +11,7 @@ export const user = [
     },
     {
         icon: PiLightbulbDuotone,
-        data: 'founder @winterfell',
+        data: 'Founder @Winterfell',
         link: 'https://x.com/winterfell_dev',
     },
     {

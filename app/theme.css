@@ -1,5 +1,8 @@
 @theme {
-    --color-primary: #1c1c1e;
+    --color-primary-light: #e4e4e4;
+    --color-primary-dark: #1c1c1e;
+    --color-secondary-dark: #09090B;
+    --color-secondary-light: #09090B;
 }
 
 .layout-width {
