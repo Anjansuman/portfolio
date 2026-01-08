@@ -32,11 +32,11 @@ export const metadata: Metadata = {
     openGraph: {
         title: "anjan",
         description: "Explore projects, skills, and contact info.",
-        url: "https://anjan-neon.vercel.app",
+        url: "https://anjan.site",
         siteName: "anjan",
         images: [
             {
-                url: "/images/preview.jpg",
+                url: "/images/profile.jpeg",
                 width: 1200,
                 height: 630,
                 alt: "Anjan Suman Portfolio Preview",

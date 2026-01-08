@@ -37,6 +37,6 @@ export const ProjectDetails: ProjectDetails[] = [
         img: <div></div>,
         skills: ["MetaMask", "Wagmi", "NextJS", "Typescript", "Tailwind CSS"],
         github: "https://github.com/Anjansuman/portfolio",
-        live: "https://anjan-neon.vercel.app"
+        live: "https://anjan.site"
     }
 ];

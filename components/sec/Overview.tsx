@@ -6,6 +6,7 @@ import { user } from '../data/user';
 import { HorizontalGap, VerticalGap } from '../ui/Gap';
 import { Iceland } from 'next/font/google';
 import { IconType } from 'react-icons/lib';
+import { cn } from '@/lib/utils';
 
 const iceland = Iceland({
     subsets: ['latin'],
@@ -22,7 +23,7 @@ type Sample = {
     life: number;
 };
 
-export default function Overview() {
+export default function Overview({ className }: { className?: string }) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const samplesRef = useRef<Sample[]>([]);
     const mouseRef = useRef<{ x: number; y: number } | null>(null);
@@ -72,9 +73,6 @@ export default function Overview() {
 
             ctx.globalAlpha = 1;
 
-            /* ===============================
-               2️⃣ DRAW IMAGE + TEXT THROUGH MASK
-            =============================== */
             ctx.globalCompositeOperation = 'source-in';
 
             // Image
@@ -101,14 +99,8 @@ export default function Overview() {
             ctx.fillText(text, x, y);
             ctx.globalCompositeOperation = 'source-over';
 
-            /* ===============================
-               3️⃣ CLEANUP
-            =============================== */
             samplesRef.current = samplesRef.current.filter(s => s.life > 0.05);
 
-            /* ===============================
-               4️⃣ ADD NEW SAMPLE
-            =============================== */
             if (mouseRef.current && tick % SAMPLE_RATE === 0) {
                 const { x, y } = mouseRef.current;
                 const pixels: Pixel[] = [];
@@ -149,7 +141,12 @@ export default function Overview() {
     }, []);
 
     return (
-        <div className="relative layout-side-border">
+        <div 
+            className={cn(
+                "relative layout-side-border",
+                className,
+            )}
+        >
             <Heading heading="overview" tag="Of me" />
 
             {/* IMPORTANT: fixed height so canvas can center correctly */}
