@@ -12,7 +12,7 @@ export default function Interested({ className }: { className?: string }) {
                 If you&apos;re interested in collaborating and building some cool things,
                 feel free to dm me on{" "}
                 <a
-                    href="https://x.com/AnjanSuman8"
+                    href="https://x.com/anjanstwt"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 "

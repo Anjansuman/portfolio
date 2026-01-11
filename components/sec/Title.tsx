@@ -42,9 +42,9 @@ export default function Title({ className }: { className?: string }) {
 function Contacts() {
 
     const data = [
-        { link: 'https://x.com/AnjanSuman8', title: 'X', tooltip: 'AnjanSuman8' },
-        { link: 'https://github.com/Anjansuman', title: 'GITHUB', tooltip: 'Anjansuman' },
-        { link: 'https://linkedin.com/in/anjansuman', title: 'LINKEDIN', tooltip: 'anjansuman' },
+        { link: 'https://x.com/anjanstwt', title: 'X', tooltip: 'anjanstwt' },
+        { link: 'https://github.com/anjanstwt', title: 'GITHUB', tooltip: 'anjanstwt' },
+        { link: 'https://linkedin.com/in/anjanstwt', title: 'LINKEDIN', tooltip: 'anjanstwt' },
         { link: 'mailto:anjansuman80@gmail.com', title: 'MAIL', tooltip: 'anjansuman80@gmail.com' }
     ]
 

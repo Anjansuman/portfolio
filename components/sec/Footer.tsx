@@ -29,24 +29,24 @@ type SocialLink = {
 
 const socialLinks: SocialLink[] = [
     {
-        href: "https://x.com/AnjanSuman8",
+        href: "https://x.com/anjanstwt",
         label: "X",
         Icon: BsTwitterX,
-        tooltip: 'AnjanSuman8',
+        tooltip: 'anjanstwt',
         size: 14,
     },
     {
-        href: "https://github.com/AnjanSuman",
+        href: "https://github.com/anjanstwt",
         label: "GITHUB",
         Icon: IoLogoGithub,
-        tooltip: 'Anjansuman',
+        tooltip: 'anjanstwt',
         size: 16,
     },
     {
-        href: "https://linkedin.com/in/anjansuman",
+        href: "https://linkedin.com/in/anjanstwt",
         label: "LINKEDIN",
         Icon: FaLinkedinIn,
-        tooltip: 'anjansuman',
+        tooltip: 'anjanstwt',
         size: 16,
     },
     {

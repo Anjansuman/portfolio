@@ -38,5 +38,5 @@ export const ProjectDetails: ProjectDetails[] = [
         skills: ["MetaMask", "Wagmi", "NextJS", "Typescript", "Tailwind CSS"],
         github: "https://github.com/Anjansuman/portfolio",
         live: "https://anjan.site"
-    }
+    },
 ];
