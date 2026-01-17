@@ -8,7 +8,7 @@ export default function GithubContributions({ className }: { className?: string 
             className
         )}>
             <GitHubCalendar
-                username={'Anjansuman'}
+                username={'anjanstwt'}
                 blockSize={9}
                 blockMargin={3}
                 fontSize={10}
